@@ -2,17 +2,15 @@
 
 Простой плагин AMP для переключение и автоматическое формирование в AMP контент. Для автоматический изменения контента, была внедрена Библиотека: **[AMP PHP Library](https://github.com/Lullabot/amp-library)**
 
-###Системные настройки
-**googleAmpModx_cache** - Кэширование для AMP контента;
-[по умолчанию: **Да** ]
-**googleAmpModx_get** - Имя запроса;
-[по умолчанию: **amp** ]
-**googleAmpModx_template** - AMP шаблон по умолчанию, если не указан id в запросе;
-[по умолчанию: **0** ]
-**googleAmpModx_warnings** - Вывести результат в Журнале ошибок.
-[по умолчанию: **Нет** ]
+### Системные настройки
+Ключ| Название|По умолчанию
+-|-|-
+**googleAmpModx_cache**    | Кэширование для AMP контента|**Да**
+**googleAmpModx_get** 	   | Имя запроса|**amp**
+**googleAmpModx_template** | AMP шаблон по умолчанию, если не указан id в запросе|**0**
+**googleAmpModx_warnings** | Вывести результат в Журнале ошибок|**Нет**
 
-###Инструкция
+### Инструкция
 **1.** Создаем шаблон AMP Страницы:
 ```html
 <!DOCTYPE html>
@@ -53,7 +51,7 @@
 	</div>
 </body>
 ```
-**2.**Если у вас один шаблон, то к ссылке дописываем запрос `?amp`, не забудьте поменять в <u>Системных настройках</u> - id AMP шаблона:<br>
+**2.** Если у вас один шаблон, то к ссылке дописываем запрос `?amp`, не забудьте поменять в <u>Системных настройках</u> - id AMP шаблона:<br>
 ```html
 <link rel="amphtml" href="https://test.ru/test.html?amp">
 <link rel="canonical" href="https://test.ru/test.html" />
@@ -66,8 +64,9 @@
 ```
 
 **3.** В файле `robots.txt` разрешаем индексацию AMP-страниц:
-```
+```robots
 Allow: *?amp
 ```
+
 
 > Библиотека PHP - AMP PHP Library - [https://github.com/Lullabot/amp-library](https://github.com/Lullabot/amp-library)
