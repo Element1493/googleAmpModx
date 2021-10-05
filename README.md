@@ -51,7 +51,7 @@
 	</div>
 </body>
 ```
-**2.**Если у вас один шаблон, то к ссылке дописываем запрос `?amp`, не забудьте поменять в <u>Системных настройках</u> - id AMP шаблона:<br>
+**2.** Если у вас один шаблон, то к ссылке дописываем запрос `?amp`, не забудьте поменять в <u>Системных настройках</u> - id AMP шаблона:<br>
 ```html
 <link rel="amphtml" href="https://test.ru/test.html?amp">
 <link rel="canonical" href="https://test.ru/test.html" />
@@ -64,8 +64,9 @@
 ```
 
 **3.** В файле `robots.txt` разрешаем индексацию AMP-страниц:
-```
+```apache
 Allow: *?amp
 ```
+
 
 > Библиотека PHP - AMP PHP Library - [https://github.com/Lullabot/amp-library](https://github.com/Lullabot/amp-library)
