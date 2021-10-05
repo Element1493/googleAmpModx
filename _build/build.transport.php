@@ -2,7 +2,7 @@
 /**
  * googleAmpModx скрипт сборки
  *
- * @package quip
+ * @package googleAmpModx
  * @subpackage build
  */
 $mtime = microtime();
