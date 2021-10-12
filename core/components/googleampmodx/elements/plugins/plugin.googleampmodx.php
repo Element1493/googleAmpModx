@@ -37,8 +37,12 @@ if($eventName == 'OnLoadWebDocument') {
                     if(filter_var($matches[1], FILTER_VALIDATE_URL)!== false){
                         $src = 'src="'.$matches[1];
                     }else{
-                        if($matches[1][0] == '/'){
-                            $src = 'src="'.$modx->getOption('site_url').substr($matches[1], 1);
+                        if(!strpos($matches[1], $modx->getOption('http_host'))){
+                            if($matches[1][0] == '/'){
+                                $src = 'src="'.$modx->getOption('site_url').substr($matches[1], 1);
+                            }else{
+                                $src = 'src="'.$modx->getOption('site_url').$matches[1];
+                            }
                         }else{
                             $src = 'src="'.$matches[1];
                         }
@@ -56,8 +60,12 @@ if($eventName == 'OnLoadWebDocument') {
                     if(filter_var($matches[1], FILTER_VALIDATE_URL)){
                         $href = 'href="'.$matches[1];
                     }else{
-                        if($matches[1][0] == '/'){
-                            $href = 'href="'.$modx->getOption('site_url').substr($matches[1], 1);
+                        if(!strpos($matches[1], $modx->getOption('http_host'))){
+                            if($matches[1][0] == '/'){
+                                $href = 'href="'.$modx->getOption('site_url').substr($matches[1], 1);
+                            }else{
+                                $href = 'href="'.$modx->getOption('site_url').$matches[1];
+                            }
                         }else{
                             $href = 'href="'.$matches[1];
                         }
