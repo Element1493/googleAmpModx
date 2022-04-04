@@ -1,4 +1,7 @@
 # googleAmpModx
+![version](https://img.shields.io/badge/version-1.1.1-orange "Version")
+![dle](https://img.shields.io/badge/MODX-2.8.3%3C-green "MODX")
+[![MIT License](https://img.shields.io/badge/license-MIT-blue "MIT License")](https://github.com/Element1493/dle_scssphp/blob/main/LICENSE)
 
 Простой плагин AMP для переключение и автоматическое формирование в AMP контент. Для автоматический изменения контента, была внедрена Библиотека: **[AMP PHP Library](https://github.com/Lullabot/amp-library)**
 
